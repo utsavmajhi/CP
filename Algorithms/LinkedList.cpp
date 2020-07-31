@@ -54,8 +54,6 @@ struct person{
         for(int i=1;i<n-1;i++){
             positionnode=positionnode->next;
         }
-        newnode->next=positionnode->next;
-        positionnode->next=newnode;
     }
 
     //print all data in all the nodes
