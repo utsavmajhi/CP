@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
-#include<vector>
+#include <vector>
 #include <algorithm>
 #include <math.h>
 #include <map>
-#include<set>
+#include <set>
 #include <forward_list>
 using namespace std;
 
