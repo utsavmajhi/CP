@@ -23,7 +23,7 @@ BSTNode* GetNewNode(int data){
 BSTNode* Insert(BSTNode* root,int data){
     if(root==NULL){
         root=GetNewNode(data);
-        return root;
+        //return root;
     }
     else{
         if(data<(root->data)){
@@ -78,13 +78,13 @@ int main(){
 BSTNode* root=NULL;
 BSTNode* headroot=NULL;
 root=Insert(root,15);
-root=Insert(root,10);
-root=Insert(root,20);
-root=Insert(root,25);
-root=Insert(root,8);
-root=Insert(root,12);
-root=Insert(root,30);
-root=Insert(root,35);
+Insert(root,10);
+Insert(root,20);
+Insert(root,25);
+Insert(root,8);
+Insert(root,12);
+Insert(root,30);
+Insert(root,35);
 cout<<"Enter the number to be searched"<<endl;
 int n;
 cin>>n;
