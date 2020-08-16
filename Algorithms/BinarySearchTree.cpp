@@ -23,7 +23,7 @@ BSTNode* GetNewNode(int data){
 BSTNode* Insert(BSTNode* root,int data){
     if(root==NULL){
         root=GetNewNode(data);
-        //return root;
+        return root;
     }
     else{
         if(data<(root->data)){
@@ -35,6 +35,25 @@ BSTNode* Insert(BSTNode* root,int data){
     }
     return root;
 }
+
+BSTNode* InsertnewNode(BSTNode* root,BSTNode* node){
+    if(root==NULL){
+        root=node;
+    }else{
+        if(root->data>node->data){
+            root->left=InsertnewNode(root->left,node);
+        }
+        else{
+            if(root->data<node->data){
+                root->right=InsertnewNode(root->right,node);
+            }
+
+        }
+    }
+    return root;
+}
+
+
 
 bool Search(BSTNode* root,int data){
     if(root==NULL){
@@ -72,6 +91,25 @@ void maximumElement(BSTNode* root){
     cout<<"MAXIMUM ELEMENT IN TREE: "<<root->data<<endl;
 }
 
+//PREORDER TRANSVERSAL
+void preorderTransaversal(BSTNode* root){
+    if(root!=NULL){
+        cout<<root->data;
+    }
+    preorderTransaversal(root->left);
+    preorderTransaversal(root->right);
+    
+}
+
+//INORDER Transversal
+void inorder_transversal(BSTNode* root){
+    if(root!=NULL){
+        inorder_transversal(root->left);
+    }
+    cout<<root->data<<" ";
+    inorder_transversal(root->right);
+}
+
 
 
 int main(){
@@ -91,4 +129,15 @@ cin>>n;
 cout<<Search(root,n)<<endl;
 minimumElement(root);
 maximumElement(root);
+//preorderTransaversal(root);(not working correctly)
+//inorder_transversal(root);
+
+//insert new element ;
+headroot=GetNewNode(-1);
+InsertnewNode(root,headroot);
+headroot=GetNewNode(90);
+InsertnewNode(root,headroot);
+maximumElement(root);
+minimumElement(root);
+
 }
