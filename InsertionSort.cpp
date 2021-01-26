@@ -1,4 +1,4 @@
-//Remember in insertion we assume that the input array's first element is laready sorted for first time.eg:[6,5,3,1,8,7,4]
+//Remember in insertion we assume that the input array's first element is already sorted for first time.eg:[6,5,3,1,8,7,4]
 #include <iostream>
 #include <string>
 #include <algorithm>
